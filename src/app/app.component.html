@@ -1,20 +1,136 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 mb-4">
+            <h2 class="page-header">Navigation Bars</h2>
+            <scb-navbar size="lg" navbarcolor="light" bgcolor="light" placement=''>
+                <a slot="slot-navbar-brand-left" class="navbar-brand" href="#">Navbar</a>
 
+                <ul slot="slot-navbar-content" class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </scb-navbar>
+            <h2 class="page-header">ToolTip</h2>
+            <scb-tooltip type="link" href="https://stencil-bs-ui-lib.herokuapp.com/" target="_blank" tooltip-title="Tooltip content" placement="top" trigger="hover focus click">
+                <span slot="btn-content">Btn text</span>
+            </scb-tooltip>
+            <h2 class="page-header">Modals</h2>
+            <scb-modal btntype="success" modalTitle="Info" modalContent="Modal Content" centered="true" animation="true" size="" backdrop="true" keyboard="true" modalfocus="true" show="true">
+            </scb-modal>
+            <h2 class="page-header">Alert</h2>
+            <scb-alert type="success">
+                <h4 class="alert-heading">Well done!</h4>
+                <p>
+                    Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                </p>
+                <hr />
+                <p class="mb-0">
+                    Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+                </p>
+            </scb-alert>
+            <h2 class="page-header">Pill</h2>
+            <scb-badge>New</scb-badge>
+            <scb-badge pill>New pill</scb-badge>
+            <scb-badge type="success" pill>Success pill</scb-badge>
+            <h2 class="page-header">Breadcrumbs</h2>
+            <scb-breadcrumb [items]="breadcrumbItems"></scb-breadcrumb>
+
+            <h2 class="page-header">Dropdown</h2>
+            <cwc-dropdown id="officialExample">
+                <button slot="dropdown-trigger" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Example dropdown </button>
+
+                <div slot="dropdown-menu" class="dropdown-menu">
+                    <a class="dropdown-item" role="presentation" href="#">Static</a>
+                    <a class="dropdown-item" role="presentation" href="#">Dynamic</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" role="presentation" href="#">Third Item</a>
+                </div>
+            </cwc-dropdown>
+
+            <h2 class="page-header">Collapse</h2>
+            <scb-collapse collapseid="collpaseComponent" [items]="cards">
+            </scb-collapse>
+
+            <h2 class="page-header">Image</h2>
+            <fcl-image brokenUrl="https://s3.amazonaws.com/images.seroundtable.com/invalid-url-1354629517.png" src="https://www.w3schools.com/howto/img_fjords.jpg"></fcl-image>
+
+            <h2 class="page-header">File Upload</h2>
+            <scb-file-input type="info" class="mb-0"></scb-file-input>
+
+            <h2 class="page-header">CWC page list</h2>
+            <cwc-list id="users-boxed" [items]="users2" itemAs='user' [template]="getUserTemplate" wrapperClass='row d-flex justify-content-around mx-0' addClass='my-3'> </cwc-list>
+            <h2 class="page-header">Markdown component</h2>
+            <cwc-markdown [data]="markdownContent"></cwc-markdown>
+
+            <h2 class="page-header">Multi Select</h2>
+            <cwc-multiselect placeholder="Search something e.g. 'Argentina'" class="border-form-control" [data]="multiSelectData"></cwc-multiselect>
+
+            <h2 class="page-header">Progress Bar</h2>
+            <cwc-progress-bar class="mx-1" [progressBarType]='progressBarType' [text]='progressBarText' [striped]='progressBarStriped' [animated]='progressBarAnimated' [progress]="progress"></cwc-progress-bar>
+            <cwc-progress-bar class="mx-1" [text]='progressBarText' [striped]='progressBarStriped1' [animated]='progressBarAnimated1' [progress]="40"></cwc-progress-bar>
+
+            <h2 class="page-header">Tags </h2>
+            <cwc-tag class="mx-1" text='Stencil' link='https://stenciljs.com/' closable="true" rounded="true" imgLink='https://stenciljs.com/assets/img/logo.png'></cwc-tag>
+            <cwc-tag class="mx-1" text='Angular' link='https://angular.io' closable="true" rounded="true" imgLink='https://cdn.auth0.com/blog/angular2-series/angular2-logo.png'></cwc-tag>
+            <cwc-tag class="mx-1" text='React' link='https://reactjs.org/' closable="true" rounded="true" imgLink='http://v.fastcdn.co/u/abda26b9/20243556-0-react-logo.png'></cwc-tag>
+
+            <h2 class="page-header">Google Autocomplete</h2>
+            <cwc-typeahead googleAutocomplete="true" placeholder="Search for a location e.g 'Berlin'"></cwc-typeahead>
+
+            <h2 class="page-header">Tabs </h2>
+            <stc-tabs>
+                <stc-tab-header slot="header" name="tab1">Tab 1</stc-tab-header>
+                <stc-tab-header slot="header" name="tab2">Tab 2</stc-tab-header>
+
+                <stc-tab-content class="mx-1" slot="content" name="tab1">
+                    Content 1
+                </stc-tab-content>
+
+                <stc-tab-content class="mx-1" slot="content" name="tab2">
+                    Content 2
+                </stc-tab-content>
+            </stc-tabs>
+
+            <h2 class="page-header">Video Player</h2>
+            <fcl-video-player poster="http://images.telvi.de/images/originals/2017/50/1/319b47392316aa2c54d5fbab.jpg" [thumbnail]="thumbnail" [theme]="theme">
+                <source src="http://techslides.com/demos/sample-videos/small.mp4" type='video/mp4' />
+            </fcl-video-player>
+
+            <h2 class="page-header">
+                Schedule</h2>
+            <cwc-schedule [resources]="scheduleResources" [events]="scheduleEvents" [now]="'2018-02-07'"></cwc-schedule>
+
+            <h2 class="page-header">Slider</h2>
+            <mwc-slider value="55" min="0" max="100" step="1" slidercolor="#BABABA"></mwc-slider>
+
+            <h2 class="page-header">Avatar component</h2>
+            <cwc-avatar name="John Doe"></cwc-avatar>
+            <cwc-avatar name="John Doe" rounded></cwc-avatar>
+            <cwc-avatar name="John Doe" color="ff00ff"></cwc-avatar>
+            <cwc-avatar name="John Doe" background="a0a0a0"></cwc-avatar>
+            <cwc-avatar name="John Doe" font-size="0.9"></cwc-avatar>
+            <cwc-avatar name="John Doe" length="1"></cwc-avatar>
+            <cwc-avatar name="john Doe" uppercase=false></cwc-avatar>
+            <cwc-avatar name="John Doe" size="96"></cwc-avatar>
+
+        </div>
+    </div>
+</div>
