@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable} from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber'
+import 'rxjs/add/observable/of';
+import { pipe } from 'rxjs/util/pipe';
+import {tap } from 'rxjs/operators/tap';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'app';
@@ -111,6 +116,16 @@ export class AppComponent {
       { id: '4', resourceId: 'e', start: '2018-02-07T03:00:00', end: '2018-02-07T08:00:00', title: 'event 4' },
       { id: '5', resourceId: 'f', start: '2018-02-07T00:30:00', end: '2018-02-07T02:30:00', title: 'event 5' }
   ];
+
+
+
+    observable$ = new Observable<string>((observer: Subscriber<string>) => {
+        setInterval(() => observer.next( new Date().toString() ), 3000);
+    });
+
+    inlineConfirmHandler(e: any) {
+        alert('some action dispatched!, payload: ' + e.detail);
+    }
 
   getUserTemplate() {
     return `<div class="card col-md-6 col-sm-12">

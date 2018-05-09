@@ -144,12 +144,20 @@
             <cwc-avatar name="John Doe" size="96"></cwc-avatar>
 
             <h2 class="page-header">Datepicker component</h2>
-            <cwc-datepicker start-date="03/25/2018" end-date="04/12/2018">
-            </cwc-datepicker>
+            <div class="datepickers-wrapper jumbotron w-50 mx-1 row">
+                <cwc-datepicker class="mx-5" start-date="03/25/2018" end-date="04/12/2018">
+                </cwc-datepicker>
+
+                <cwc-datepicker class="styled mx-5" lang="de">
+                </cwc-datepicker>
+            </div>
 
             <h2 class="page-header">Inlineedit component</h2>
-            <cwc-inlineedit label="Field label" value="Example of text">
+          
+            <cwc-inlineedit label="Field label" [value]="observable$ | async" (onconfirm)="inlineConfirmHandler($event)">
             </cwc-inlineedit>
+                
+            {{ observable$ | async}}
 
             <h2 class="page-header">Fileinput component</h2>
             <cwc-file-input class="mb-0"></cwc-file-input>
