@@ -123,8 +123,14 @@ export class AppComponent {
         setInterval(() => observer.next( new Date().toString() ), 3000);
     });
 
+    observable2$ = Observable.of('Lorem ipsum dolor sit amet, consectetur..');
+
     inlineConfirmHandler(e: any) {
         alert('some action dispatched!, payload: ' + e.detail);
+    }
+
+    inlineeditTextareaConfirmHandler(e: CustomEvent): void {
+        alert(`Inlineedit-textarea component value is set to: '${e.detail}'`);
     }
 
   getUserTemplate() {
