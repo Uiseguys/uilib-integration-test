@@ -154,12 +154,17 @@
             </div>
 
             <h2 class="page-header">Inlineedit component</h2>
-          
+            
             <cwc-inlineedit label="Field label" [value]="observable$ | async" (onconfirm)="inlineConfirmHandler($event)">
             </cwc-inlineedit>
-                
+            
             {{ observable$ | async}}
+            
+            <h2 class="page-header">Inlineedit-textarea component   <a href="">Docs</a></h2>
 
+            <cwc-inlineedit-textarea label="Field label" [value]="observable2$ | async" (onconfirm)="inlineeditTextareaConfirmHandler($event)">
+            </cwc-inlineedit-textarea>
+                
             <h2 class="page-header">Fileinput component</h2>
             <cwc-file-input class="mb-0"></cwc-file-input>
         </div>
