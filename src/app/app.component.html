@@ -88,7 +88,8 @@
             <scb-file-input type="info" class="mb-0"></scb-file-input> -->
 
             <h2 class="page-header">CWC page list</h2>
-            <cwc-list id="users-boxed" [items]="users2" itemAs='user' [template]="getUserTemplate" wrapperClass='row d-flex justify-content-around mx-0' addClass='my-3'> </cwc-list>
+            <cwc-list id="users-boxed" [items]="users2" itemAs='user' [template]="getUserTemplate" wrapperClass='row d-flex justify-content-around mx-0'
+                addClass='my-3'> </cwc-list>
 
             <h2 class="page-header">Markdown component</h2>
             <cwc-markdown [data]="markdownContent"></cwc-markdown>
@@ -97,8 +98,10 @@
             <cwc-multiselect placeholder="Search something e.g. 'Argentina'" class="border-form-control" [data]="multiSelectData"></cwc-multiselect>
 
             <h2 class="page-header">Progress Bar</h2>
-            <cwc-progress-bar class="mx-1" [progressBarType]='progressBarType' [text]='progressBarText' [striped]='progressBarStriped' [animated]='progressBarAnimated' [progress]="progress"></cwc-progress-bar>
-            <cwc-progress-bar class="mx-1" [text]='progressBarText' [striped]='progressBarStriped1' [animated]='progressBarAnimated1' [progress]="40"></cwc-progress-bar>
+            <cwc-progress-bar class="mx-1" [progressBarType]='progressBarType' [text]='progressBarText' [striped]='progressBarStriped'
+                [animated]='progressBarAnimated' [progress]="progress"></cwc-progress-bar>
+            <cwc-progress-bar class="mx-1" [text]='progressBarText' [striped]='progressBarStriped1' [animated]='progressBarAnimated1'
+                [progress]="40"></cwc-progress-bar>
 
             <h2 class="page-header">Tags </h2>
             <cwc-tag class="mx-1" text='Stencil' link='https://stenciljs.com/' closable="true" rounded="true" imgLink='https://stenciljs.com/assets/img/logo.png'></cwc-tag>
@@ -123,16 +126,17 @@
             </stc-tabs> -->
 
             <h2 class="page-header">Video Player</h2>
-            <fcl-video-player poster="http://images.telvi.de/images/originals/2017/50/1/319b47392316aa2c54d5fbab.jpg" [thumbnail]="thumbnail" [theme]="theme">
+            <fcl-video-player poster="http://images.telvi.de/images/originals/2017/50/1/319b47392316aa2c54d5fbab.jpg" [thumbnail]="thumbnail"
+                [theme]="theme">
                 <source src="http://techslides.com/demos/sample-videos/small.mp4" type='video/mp4' />
             </fcl-video-player>
 
             <!-- <h2 class="page-header">
                 Schedule</h2>
             <cwc-schedule [resources]="scheduleResources" [events]="scheduleEvents" [now]="'2018-02-07'"></cwc-schedule>
-
+            -->
             <h2 class="page-header">Slider</h2>
-            <mwc-slider value="55" min="0" max="100" step="1" slidercolor="#BABABA"></mwc-slider> -->
+            <mwc-slider value="55" min="0" max="100" step="1" slidercolor="#BABABA"></mwc-slider>
 
             <h2 class="page-header">Avatar component</h2>
             <cwc-avatar name="John Doe"></cwc-avatar>
@@ -154,17 +158,17 @@
             </div>
 
             <h2 class="page-header">Inlineedit component</h2>
-            
+
             <cwc-inlineedit label="Field label" [value]="observable$ | async" (onconfirm)="inlineConfirmHandler($event)">
             </cwc-inlineedit>
-            
+
             {{ observable$ | async}}
-            
+
             <h2 class="page-header">Inlineedit-textarea component</h2>
 
             <cwc-inlineedit-textarea label="Field label" [value]="observable2$ | async" (onconfirm)="inlineeditTextareaConfirmHandler($event)">
             </cwc-inlineedit-textarea>
-                
+
             <h2 class="page-header">Fileinput component</h2>
             <cwc-file-input class="mb-0"></cwc-file-input>
         </div>
