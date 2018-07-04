@@ -55,6 +55,36 @@
             <!-- <h2 class="page-header">Breadcrumbs</h2>
             <scb-breadcrumb [items]="breadcrumbItems"></scb-breadcrumb> -->
 
+            <h2 class="page-header">Drag and drop component</h2>
+
+            <cwc-dnd [rows]="['#animals', '#birds']" class="row">
+                <div id="animals" class="col-5 offset-col-1">
+                  <div class="column card p-2">
+                    <p>cat</p>
+                  </div>
+                  <div class="column card p-2">
+                    <p>dog</p>
+                  </div>
+                  <div class="column card p-2">
+                    <p>elephant</p>
+                  </div>
+                </div>
+                <div id="birds" class="col-5 offset-col-1">
+                  <div class="column card p-2">
+                    <p>tucano</p>
+                  </div>
+                  <div class="column card p-2">
+                    <p>crown</p>
+                  </div>
+                  <div class="column card p-2">
+                    <p>parrot</p>
+                  </div>
+                </div>
+                </cwc-dnd>
+
+
+
+
             <h2 class="page-header">Moment</h2>
             <cwc-moment duration="123412341234123" unit="seconds"></cwc-moment>
             <cwc-moment date="2016-01-10 14:30" format="L"></cwc-moment>
