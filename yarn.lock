@@ -293,13 +293,9 @@
   version "6.2.6"
   resolved "https://registry.yarnpkg.com/@types/video.js/-/video.js-6.2.6.tgz#7eedc44d8cb0aaf9306925ad4a03781c8ba03bfa"
 
-"@ui-guys/bootstra-slider@^10.0.1":
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/@ui-guys/bootstra-slider/-/bootstra-slider-10.0.1.tgz#29bb5050a9212bd9da42af21dd899a8313dead1b"
-
-"@ui-guys/stencil-bs-ui-lib@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@ui-guys/stencil-bs-ui-lib/-/stencil-bs-ui-lib-0.5.0.tgz#8fb3fbe653b5089b1c97d71486b2f77f95a19cb0"
+"@ui-guys/stencil-bs-ui-lib@^0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@ui-guys/stencil-bs-ui-lib/-/stencil-bs-ui-lib-0.5.6.tgz#167d2e7829cd492adddd5d8b6d06c770cb918de3"
   dependencies:
     "@stencil/core" "0.7.24"
     "@stencil/dev-server" latest
@@ -309,11 +305,10 @@
     "@types/bootstrap" "^4.0.1"
     "@types/jest" "^21.1.1"
     "@types/video.js" "^6.2.3"
-    "@ui-guys/bootstra-slider" "^10.0.1"
-    "@ui-guys/stencil-markdown" "^1.0.0"
     ajv "^6.1.1"
     bootstrap "^4.0.0"
     bootstrap.native "^2.0.21"
+    dragula "^3.7.2"
     http-server "^0.11.1"
     jest "^21.2.1"
     lodash "^4.17.4"
@@ -325,10 +320,6 @@
     tslint "^5.7.0"
     video.js "^6.6.0"
     videojs-font "^2.0.0"
-
-"@ui-guys/stencil-markdown@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@ui-guys/stencil-markdown/-/stencil-markdown-1.0.0.tgz#47784ec868ebf945e58eca9126ab791e74fe09e9"
 
 abab@^1.0.3:
   version "1.0.4"
@@ -662,6 +653,10 @@ async@^2.1.2, async@^2.1.4, async@^2.4.1, async@~2.6.0:
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
+
+atoa@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/atoa/-/atoa-1.0.0.tgz#0cc0e91a480e738f923ebc103676471779b34a49"
 
 atob@^2.1.1:
   version "2.1.1"
@@ -1590,6 +1585,13 @@ continuable-cache@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/continuable-cache/-/continuable-cache-0.3.1.tgz#bd727a7faed77e71ff3985ac93351a912733ad0f"
 
+contra@1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/contra/-/contra-1.9.4.tgz#f53bde42d7e5b5985cae4d99a8d610526de8f28d"
+  dependencies:
+    atoa "1.0.0"
+    ticky "1.0.1"
+
 convert-source-map@^1.4.0, convert-source-map@^1.5.0, convert-source-map@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
@@ -1703,6 +1705,12 @@ cross-spawn@^5.0.1:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+crossvent@1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/crossvent/-/crossvent-1.5.4.tgz#da2c4f8f40c94782517bf2beec1044148194ab92"
+  dependencies:
+    custom-event "1.0.0"
+
 cryptiles@2.x.x:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/cryptiles/-/cryptiles-2.0.5.tgz#3bdfecdc608147c1c67202fa291e7dca59eaa3b8"
@@ -1779,6 +1787,10 @@ currently-unhandled@^0.4.1:
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
   dependencies:
     array-find-index "^1.0.1"
+
+custom-event@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/custom-event/-/custom-event-1.0.0.tgz#2e4628be19dc4b214b5c02630c5971e811618062"
 
 custom-event@~1.0.0:
   version "1.0.1"
@@ -2064,6 +2076,13 @@ domutils@1.5.1:
 double-ended-queue@^2.1.0-0:
   version "2.1.0-0"
   resolved "https://registry.yarnpkg.com/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz#103d3527fd31528f40188130c841efdd78264e5c"
+
+dragula@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/dragula/-/dragula-3.7.2.tgz#4a35c9d3981ffac1a949c29ca7285058e87393ce"
+  dependencies:
+    contra "1.9.4"
+    crossvent "1.5.4"
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.6.0"
@@ -7266,6 +7285,10 @@ thunkify@^2.1.2:
 thunky@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/thunky/-/thunky-1.0.2.tgz#a862e018e3fb1ea2ec3fce5d55605cf57f247371"
+
+ticky@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ticky/-/ticky-1.0.1.tgz#b7cfa71e768f1c9000c497b9151b30947c50e46d"
 
 time-stamp@^2.0.0:
   version "2.0.0"
