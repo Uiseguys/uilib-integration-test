@@ -293,9 +293,9 @@
   version "6.2.6"
   resolved "https://registry.yarnpkg.com/@types/video.js/-/video.js-6.2.6.tgz#7eedc44d8cb0aaf9306925ad4a03781c8ba03bfa"
 
-"@ui-guys/stencil-bs-ui-lib@^0.5.6":
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/@ui-guys/stencil-bs-ui-lib/-/stencil-bs-ui-lib-0.5.6.tgz#167d2e7829cd492adddd5d8b6d06c770cb918de3"
+"@ui-guys/stencil-bs-ui-lib@^0.5.7":
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/@ui-guys/stencil-bs-ui-lib/-/stencil-bs-ui-lib-0.5.7.tgz#75978475f71ac0434f63fad66abe4da5b4bdef4c"
   dependencies:
     "@stencil/core" "0.7.24"
     "@stencil/dev-server" latest
