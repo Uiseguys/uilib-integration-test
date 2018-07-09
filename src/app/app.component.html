@@ -130,7 +130,7 @@
             <cwc-autocomplete-select placeholder="Search something e.g. 'Argentina'" class="border-form-control" [data]="multiSelectData"></cwc-autocomplete-select>
 
             <h2 class="page-header">Multi Select</h2>
-            <cwc-multiselect [value]="['apple', 'mango', 'banana']"></cwc-multiselect>
+            <cwc-multiselect [value]="['apple', 'mango', 'banana']" (onchange)="handleMultiselectChange($event)"></cwc-multiselect>
 
             <h2 class="page-header">Progress Bar</h2>
             <cwc-progress-bar class="mx-1" [progressBarType]='progressBarType' [text]='progressBarText' [striped]='progressBarStriped'

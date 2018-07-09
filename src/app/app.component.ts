@@ -180,4 +180,8 @@ export class AppComponent {
             </div>
         </div> `;
   }
+
+  handleMultiselectChange(e) {
+    console.log(e);
+  }
 }
