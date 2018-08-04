@@ -33,6 +33,8 @@
             <scb-tooltip type="link" href="https://stencil-bs-ui-lib.herokuapp.com/" target="_blank" tooltip-title="Tooltip content" placement="top" trigger="hover focus click">
                 <span slot="btn-content">Btn text</span>
             </scb-tooltip>-->
+
+
             <h2 class="page-header">Modals</h2>
             <scb-modal btntype="success" modalTitle="Info" centered="true" animation="true" size="" backdrop="true" keyboard="true" modalfocus="true">
                 Put your content here.
@@ -206,6 +208,27 @@
 
             <h2 class="page-header">Fileinput component</h2>
             <cwc-file-input class="mb-0"></cwc-file-input>
+
+
+            <br />
+            <br />
+            <br />
+            <h1>Tooltip</h1>
+            <scb-tooltip
+                type="button"
+                tooltip-title="Tooltip content"
+                placement="bottom"
+                trigger="hover">
+                <span slot="btn-content">Hover over me</span>
+            </scb-tooltip>
+
+            <scb-tooltip
+                type="button"
+                tooltip-title="Tooltip content"
+                placement="bottom"
+                trigger="click">
+                <span slot="btn-content">Click on me</span>
+            </scb-tooltip>
         </div>
     </div>
 </div>
